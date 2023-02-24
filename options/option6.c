@@ -10,11 +10,6 @@ void option6(){
     int i, size;
     FILE* file = fopen("./inputs/input6.txt", "r");
     
-    if (file == NULL) {
-        printf("Failed to open input file.\n");
-        return;
-    }
-    
     fscanf(file, "%d", &size);
     float arr[size];
     for ( i = 0; i < size; i++ ) fscanf(file, "%f", &arr[i]); 
