@@ -52,7 +52,7 @@ int main() {
 				option5();
 				break;
 			case '6':
-				//option6();
+				option6();
 				break;
 		}
 		
