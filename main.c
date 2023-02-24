@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+#include<math.h>
 #include "./options/option1.c"
 #include "./options/option2.c"
 #include "./options/option3.c"
@@ -30,7 +32,7 @@ int main() {
     		scanf("%[^\n]", line);
 		} while (!validChoice(line));
 		
-		printf("\nModify './inputs/input%c.txt' to change the input.\n", *line);
+		if(*line != '0') printf("\nModify './inputs/input%c.txt' to change the input.\n", *line);
 		
 		switch(*line) {
 			case '0':
@@ -40,13 +42,13 @@ int main() {
 				option1();
 				break;
 			case '2':
-				//option2();
+				option2();
 				break;
 			case '3':
-				//option3();
+				option3();
 				break;
 			case '4':
-				//option4();
+				option4();
 				break;
 			case '5':
 				option5();
