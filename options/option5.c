@@ -4,7 +4,7 @@ void option5() {
 	fscanf(file, "%ld", &n);
 	fclose(file);
 	
-	printf("Number of ways to get %dVND from 10k, 20k and 50k: ", n);
+	printf("Number of ways to get %ldVND from 10k, 20k and 50k: ", n);
 	n /= 10000;
 	int max50 = n / 5;
 	int i, res = 0;
