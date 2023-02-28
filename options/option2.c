@@ -4,7 +4,13 @@ void option2() {
     fscanf(file, "%d", &size);
 
     char arr[size][21];
-    for(i = 0; i != size; i++) fscanf(file, "%s", (arr+i));
+    for(i = 0; i != size; i++) {
+        fscanf(file, "%s", (arr+i));
+        if(!isNumber(arr[i], strlen(arr[i]))) {
+            printf("Invalid input (The array should only contain numbers)\n");
+            return;
+        }
+    } 
 
     printf("Initial array: ");
     for(i= 0; i != size; i++) printf("%s ", arr[i]);
